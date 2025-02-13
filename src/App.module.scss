@@ -1,0 +1,13 @@
+.tab {
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
