@@ -4,10 +4,10 @@ import Header from './components/Header/Header';
 import VrSection from './components/VrSection';
 import TaskSection from './components/Tasks/TaskSection';
 import styles from './App.module.scss';
-import SliderSection from './components/SliderSection/SliderSection';
+import MpaSection from './components/MpaSection';
 
 function App() {
-  const [tab, setTab] = useState('mpa');
+  const [tab, setTab] = useState('vr');
 
   return (
     <>
@@ -21,14 +21,16 @@ function App() {
               <VrSection id={'vr2-data'} title={'ПК №2'} />
             </>
           )}
-          {tab === 'sushilka' && (
-            <>
-              <TaskSection />
-            </>
-          )}
+          {tab === 'sushilka' && <>Контент Сушилок </>}
           {tab === 'mpa' && (
             <>
-              <SliderSection id={'vr1-data'} />
+              <MpaSection id={'mpa2-data'} title={'МПА №2'} />
+              <MpaSection id={'mpa3-data'} title={'МПА №3'} />
+            </>
+          )}
+          {tab === 'task' && (
+            <>
+              <TaskSection />
             </>
           )}
         </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.scss';
-import logo from '/logo-name.svg';
+import logo from '/vite.svg';
 import { data } from './data';
 
 export default function Header() {

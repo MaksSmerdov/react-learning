@@ -1,8 +1,8 @@
-import Button from "./Button/Button";
+import Button from './Button/Button';
 
 export default function TabsSection({ active, onChange }) {
   return (
-    <section style={{ display:'flex', gap:'5px', justifyContent: 'center' }}>
+    <section style={{ display: 'flex', gap: '5px', justifyContent: 'center' }}>
       <Button isActive={active === 'vr'} onClick={() => onChange('vr')}>
         Печи Карбонизации
       </Button>
@@ -11,6 +11,9 @@ export default function TabsSection({ active, onChange }) {
       </Button>
       <Button isActive={active === 'mpa'} onClick={() => onChange('mpa')}>
         МПА
+      </Button>
+      <Button isActive={active === 'task'} onClick={() => onChange('task')}>
+        Задачи
       </Button>
     </section>
   );

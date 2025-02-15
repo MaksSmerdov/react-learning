@@ -1,0 +1,80 @@
+.slider {
+  &_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &_bottom {
+    text-align: center;
+  }
+}
+
+.mySwiper2 {
+  width: 500px;
+
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev) {
+    color: green;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  :global(.swiper-button-next:hover),
+  :global(.swiper-button-prev:hover) {
+    opacity: 0.7;
+  }
+
+  :global(.swiper-slide) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mySwiper {
+  max-width: 500px;
+  height: 50px;
+  cursor: pointer;
+
+  :global(.slider-wrapper) {
+    display: flex;
+    justify-content: center;
+    max-height: 50px;
+  }
+
+  :global(.swiper-slide) {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #81c784, green);
+    transition: color 0.5s ease-in-out;
+  }
+
+  :global(.swiper-slide::before) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, green, #81c784);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  :global(.swiper-slide:hover::before) {
+    opacity: 1;
+  }
+
+  :global(.swiper-slide:hover) {
+    color: black;
+  }
+
+}
