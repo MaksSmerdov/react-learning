@@ -1,6 +1,11 @@
-import Button from './Button/Button';
+import Button from './Button/Button.jsx';
 
-export default function TabsSection({ active, onChange }) {
+interface TabsType {
+  active: string;
+  onChange: (value: string) => void;
+}
+
+export default function TabsSection({ active, onChange }: TabsType) {
   return (
     <section style={{ display: 'flex', gap: '5px', justifyContent: 'center' }}>
       <Button isActive={active === 'vr'} onClick={() => onChange('vr')}>
@@ -14,6 +19,9 @@ export default function TabsSection({ active, onChange }) {
       </Button>
       <Button isActive={active === 'task'} onClick={() => onChange('task')}>
         Задачи
+      </Button>
+      <Button isActive={active === 'form'} onClick={() => onChange('form')}>
+        Форма
       </Button>
     </section>
   );

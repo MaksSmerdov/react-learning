@@ -1,4 +1,3 @@
-import Button from '../../Button/Button';
 import styles from '../TaskSection.module.scss';
 
 export default function TaskItem({ task, index, onTaskCompletion, onTaskDeletion }) {

@@ -1,6 +1,16 @@
 import styles from './Table.module.scss';
 
-export default function Table({ sensorData, unit, title }) {
+interface SensorData {
+  [key: string]: string | number;
+}
+
+interface TableType {
+  sensorData: SensorData;
+  unit: string;
+  title: string;
+}
+
+export default function Table({ sensorData, unit, title }: TableType) {
   return (
     <table className={styles['table']}>
       <caption className={styles['table__title']}>{title}</caption>
@@ -15,7 +25,7 @@ export default function Table({ sensorData, unit, title }) {
           <tr key={key} className={styles['table__tr']}>
             <td className={`${styles['table__td']} ${styles['table__left']}`}>{key}</td>
             <td className={`${styles['table__td']} ${styles['table__right']}`}>
-              {value} 
+              {value}
             </td>
           </tr>
         ))}

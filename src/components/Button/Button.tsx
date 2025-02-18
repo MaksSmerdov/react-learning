@@ -1,6 +1,11 @@
 import styles from './Button.module.scss';
 
-export default function Button({ children, isActive, ...props }) {
+interface ButtonType {
+  children: any;
+  isActive: any;
+}
+
+export default function Button({ children, isActive, ...props }: ButtonType) {
   return (
     <button {...props} className={isActive ? `${styles['button']} ${styles['active']}` : styles['button']}>
       {children}

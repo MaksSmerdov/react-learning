@@ -33,6 +33,11 @@ function App() {
               <TaskSection />
             </>
           )}
+          {tab === 'form' && (
+            <>
+              <TaskSection />
+            </>
+          )}
         </div>
       </main>
     </>
