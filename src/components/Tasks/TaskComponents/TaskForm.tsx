@@ -1,15 +1,19 @@
-import { useState } from 'react';
-import Button from '../../Button/Button'
+import { useState, ChangeEvent, FormEvent } from 'react';
+import Button from '../../Button/Button';
 import styles from '../TaskSection.module.scss';
 
-export default function TaskForm({ onAddTask }) {
-  const [list, setList] = useState('');
+interface TaskFormProps {
+  onAddTask: (task: string) => void;
+}
 
-  function handleListChange(event) {
+export default function TaskForm({ onAddTask }: TaskFormProps) {
+  const [list, setList] = useState<string>('');
+
+  function handleListChange(event: ChangeEvent<HTMLInputElement>) {
     setList(event.target.value);
   }
 
-  function handleSubmit(event) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (list.trim().length === 0) {
       return;

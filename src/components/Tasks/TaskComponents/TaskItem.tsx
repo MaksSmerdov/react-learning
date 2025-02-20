@@ -1,7 +1,20 @@
+import React, { KeyboardEvent } from 'react';
 import styles from '../TaskSection.module.scss';
 
-export default function TaskItem({ task, index, onTaskCompletion, onTaskDeletion }) {
-  const handleKeyDown = (event) => {
+interface Task {
+  text: string;
+  completed: boolean;
+}
+
+interface TaskItemProps {
+  task: Task;
+  index: number;
+  onTaskCompletion: (index: number) => void;
+  onTaskDeletion: (index: number) => void;
+}
+
+export default function TaskItem({ task, index, onTaskCompletion, onTaskDeletion }: TaskItemProps) {
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       onTaskCompletion(index);
     }
@@ -11,7 +24,7 @@ export default function TaskItem({ task, index, onTaskCompletion, onTaskDeletion
     <div className={styles['task__item']}>
       <input
         className={styles['checkbox__input']}
-        id={index}
+        id={index.toString()}
         type="checkbox"
         checked={task.completed}
         onChange={() => onTaskCompletion(index)}
@@ -19,7 +32,7 @@ export default function TaskItem({ task, index, onTaskCompletion, onTaskDeletion
         tabIndex={0}
       />
 
-      <label className={styles['checkbox__label']} htmlFor={index}>
+      <label className={styles['checkbox__label']} htmlFor={index.toString()}>
         <span
           className={styles['task__span']}
           style={{

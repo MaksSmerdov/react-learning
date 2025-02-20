@@ -1,5 +1,5 @@
 import TaskForm from './TaskComponents/TaskForm';
-import TaskList from './TaskComponents/TaskList.tsx';
+import TaskList from './TaskComponents/TaskList';
 import Button from '../Button/Button';
 import useTaskManager from './Hooks/useTaskManager';
 import styles from './TaskSection.module.scss';
@@ -17,3 +17,4 @@ export default function TaskSection() {
     </div>
   );
 }
+ 
