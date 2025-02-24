@@ -5,9 +5,10 @@ import VrSection from './components/VrSection';
 import TaskSection from './components/Tasks/TaskSection';
 import styles from './App.module.scss';
 import MpaSection from './components/MpaSection';
+import TestComponent from './components/TestSection';
 
 function App() {
-  const [tab, setTab] = useState('vr');
+  const [tab, setTab] = useState('test');
 
   return (
     <>
@@ -33,9 +34,9 @@ function App() {
               <TaskSection />
             </>
           )}
-          {tab === 'form' && (
+          {tab === 'test' && (
             <>
-              <TaskSection />
+              <TestComponent />
             </>
           )}
         </div>

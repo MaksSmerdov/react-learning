@@ -20,8 +20,8 @@ export default function TabsSection({ active, onChange }: TabsType) {
       <Button isActive={active === 'task'} onClick={() => onChange('task')}>
         Задачи
       </Button>
-      <Button isActive={active === 'form'} onClick={() => onChange('form')}>
-        Форма
+      <Button isActive={active === 'test'} onClick={() => onChange('test')}>
+        Тест
       </Button>
     </section>
   );
