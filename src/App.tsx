@@ -6,6 +6,7 @@ import TaskSection from './components/Tasks/TaskSection';
 import styles from './App.module.scss';
 import MpaSection from './components/MpaSection';
 import TestComponent from './components/TestSection';
+import MarketSection from './components/MarketSection';
 
 function App() {
   const [tab, setTab] = useState('test');
@@ -36,7 +37,7 @@ function App() {
           )}
           {tab === 'test' && (
             <>
-              <TestComponent />
+              <MarketSection />
             </>
           )}
         </div>
