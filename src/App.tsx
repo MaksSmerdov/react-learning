@@ -5,8 +5,7 @@ import VrSection from './components/VrSection';
 import TaskSection from './components/Tasks/TaskSection';
 import styles from './App.module.scss';
 import MpaSection from './components/MpaSection';
-import TestComponent from './components/TestSection';
-import MarketSection from './components/MarketSection';
+import MarketSection from './components/MarketSection/MarketSection';
 
 function App() {
   const [tab, setTab] = useState('test');
@@ -35,7 +34,7 @@ function App() {
               <TaskSection />
             </>
           )}
-          {tab === 'test' && (
+          {tab === 'market' && (
             <>
               <MarketSection />
             </>

@@ -1,0 +1,54 @@
+.container {
+  margin: 0 auto;
+  width: 900px;
+}
+
+.market__header {
+  font-size: 14px;
+  text-align: center;
+}
+
+.market__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 0fr);
+  gap: 20px;
+}
+
+.market__item {
+  width: 250px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(177, 236, 177);
+  border-radius: 12px;
+}
+
+.market__img {
+  border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(204, 214, 204);
+}
+
+.market__price--div {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+
+.market__price--current {
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.market__price--discount {
+  font-weight: 800;
+}
+
+.list-reset {
+  list-style-type: none;
+}
